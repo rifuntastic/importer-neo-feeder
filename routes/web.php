@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [SettingController::class, 'index']);
+Route::get('setting', [SettingController::class, 'index']);
+Route::post('check-setting', [SettingController::class, 'checkSetting']);
+
+Route::middleware('authneofeeder')->group(function() {
+    Route::prefix('dashboard')->group(function () {
+        Route::get('logout', [ProfilController::class, 'logout']);
+
+        Route::get('profil', [ProfilController::class, 'index']);
+    });
+
 });
+
+
