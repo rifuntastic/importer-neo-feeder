@@ -9,7 +9,6 @@ class ProfilController extends Controller
 {
     public function index()
     {
-
         $getProfilPT = new NeoFeeder([
             'act' => 'GetProfilPT'
         ]);

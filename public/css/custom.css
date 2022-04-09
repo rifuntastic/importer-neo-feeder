@@ -1,3 +1,4 @@
+/* Auth Page */
 .auth .brand-logo img {
     width: 275px;
 }
@@ -10,70 +11,54 @@
     z-index: 2;
 }
 
-.sidebar .nav .nav-item .nav-link i.menu-caret {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.rtl .sidebar .nav .nav-item .nav-link i.menu-caret {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-.sidebar .nav .nav-item .nav-link i.menu-caret:before {
-    display: block;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-
-.sidebar .nav .nav-item .nav-link[aria-expanded="true"] i.menu-caret:before {
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.sidebar .nav .nav-item.active > .nav-link i,
-.sidebar .nav .nav-item.active > .nav-link .menu-title,
-.sidebar .nav .nav-item.active > .nav-link .menu-arrow {
-    color: #fff;
+/* Sidebar */
+.sidebar .nav .nav-item .nav-link i.menu-arrow:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0da";
 }
 
 .sidebar .nav .nav-item.active > .nav-link i.menu-arrow::before {
-    content: "\e64b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0d7";
 }
 
-.sidebar .nav .nav-item:hover > .nav-link i,
-.sidebar .nav .nav-item:hover > .nav-link .menu-title,
-.sidebar .nav .nav-item:hover > .nav-link .menu-arrow {
-    color: #fff;
-}
-
-.sidebar-mini .sidebar .nav .nav-item .nav-link i.menu-arrow {
-    display: inline-block;
-    margin-left: 5px;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.sidebar-icon-only .sidebar .nav .nav-item .nav-link i.menu-caret {
-    display: none;
-}
-
+/* Navbar */
 .navbar .navbar-brand-wrapper .brand-logo-mini img {
     width: 100%;
     max-width: 100%;
     margin: auto;
+}
+
+/* Dropdowns */
+.dropdown .dropdown-toggle:after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f107";
+}
+
+/* Data Tables */
+.dataTables_wrapper .dataTable thead .sorting:after,
+.dataTables_wrapper .dataTable thead .sorting_asc:after,
+.dataTables_wrapper .dataTable thead .sorting_desc:after,
+.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
+.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f106";
+    right: 1.2em;
+    top: 0;
+}
+
+.dataTables_wrapper .dataTable thead .sorting:before,
+.dataTables_wrapper .dataTable thead .sorting_asc:before,
+.dataTables_wrapper .dataTable thead .sorting_desc:before,
+.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
+.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f107";
+    right: 1.2em;
+    bottom: 0;
 }

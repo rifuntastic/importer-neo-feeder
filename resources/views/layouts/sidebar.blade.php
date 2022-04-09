@@ -17,12 +17,12 @@
                 aria-controls="referensi">
                 <i class="fa-solid fa-file-lines fa-fw mr-2"></i>
                 <span class="menu-title">Referensi</span>
-                <i class="fa-solid fa-caret-right fa-fw fa-sm menu-caret"></i>
+                <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="referensi">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a class="nav-link" href="{{ url('dashboard/ref-agama') }}">Agama</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('dashboard/ref-alat-transportasi') }}">!! Alat
+                    <li class="nav-item"><a class="nav-link" href="{{ url('dashboard/ref-alat-transportasi') }}">Alat
                             Transportasi</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('dashboard/ref-jalur-daftar') }}">Jalur
                             Daftar</a></li>
@@ -46,9 +46,9 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#pengaturan" aria-expanded="false"
                 aria-controls="pengaturan">
-                <i class="fa-solid fa-file-lines fa-fw mr-2"></i>
+                <i class="fa-solid fa-gears fa-fw mr-2"></i>
                 <span class="menu-title">Pengaturan</span>
-                <i class="fa-solid fa-caret-right fa-fw fa-sm menu-caret"></i>
+                <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="pengaturan">
                 <ul class="nav flex-column sub-menu">
