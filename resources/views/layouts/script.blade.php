@@ -21,6 +21,7 @@
         showTick: true,
         style: '',
         styleBase: 'form-control',
+        dropupAuto: false,
         title: '--Pilih--'
     });
 </script>

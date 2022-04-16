@@ -6,6 +6,7 @@ use App\Http\Controllers\SandboxController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ReferensiController;
+use App\Http\Controllers\LogImportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::middleware('authneofeeder')->group(function() {
             Route::get('profil', [ProfilController::class, 'index']);
 
             Route::get('mahasiswa', [MahasiswaController::class, 'index']);
+            Route::post('mahasiswa', [MahasiswaController::class, 'store']);
 
             Route::get('ref-agama', [ReferensiController::class, 'agama']);
             Route::get('ref-alat-transportasi', [ReferensiController::class, 'alatTransportasi']);
@@ -43,6 +45,8 @@ Route::middleware('authneofeeder')->group(function() {
             Route::get('ref-wilayah-provinsi', [ReferensiController::class, 'wilayahProvinsi']);
             Route::get('ref-wilayah-kota', [ReferensiController::class, 'wilayahKota']);
             Route::get('ref-wilayah-kecamatan', [ReferensiController::class, 'wilayahKecamatan']);
+
+            Route::get('log-import', [LogImportController::class, 'index']);
         });
 
         Route::get('error', function () {

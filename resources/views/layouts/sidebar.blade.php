@@ -56,5 +56,11 @@
                 </ul>
             </div>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('dashboard/log-import') }}">
+                <i class="fa-solid fa-clock-rotate-left fa-fw mr-2"></i>
+                <span class="menu-title">Log Import</span>
+            </a>
+        </li>
     </ul>
 </nav>
