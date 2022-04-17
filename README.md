@@ -4,6 +4,15 @@ Importer aplikasi PDDIKTI Neo Feeder menggunakan file excel. Aplikasi ini dikemb
 
 <br/>
 
+## Fitur
+
+-   Insert Biodata Mahasiswa :white_check_mark:
+-   Insert Riwayat Pendidikan Mahasiswa :white_check_mark:
+-   Insert Mata Kuliah :white_check_mark:
+-   Insert Mata Kuliah ke Kurikulum :hourglass_flowing_sand:
+
+<br/>
+
 ## Persiapan
 
 -   Install aplikasi web server, untuk mempermudah dapat mengunakan aplikasi : <a href="https://www.apachefriends.org/download.html">XAMPP</a>. Pastikan versi php yang digunakan minimal versi 8.
@@ -75,14 +84,6 @@ php artisan serve
 ```
 http://127.0.0.1:8000
 ```
-
-<br/>
-
-## Fitur
-
--   Insert Biodata Mahasiswa :white_check_mark:
--   Insert Riwayat Pendidikan Mahasiswa :white_check_mark:
--   Insert Mata Kuliah :hourglass_flowing_sand:
 
 <br/>
 

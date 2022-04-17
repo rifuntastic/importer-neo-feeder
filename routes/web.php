@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SandboxController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\LogImportController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ReferensiController;
-use App\Http\Controllers\LogImportController;
+use App\Http\Controllers\MataKuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::middleware('authneofeeder')->group(function() {
 
             Route::get('mahasiswa', [MahasiswaController::class, 'index']);
             Route::post('mahasiswa', [MahasiswaController::class, 'store']);
+
+            Route::get('mata-kuliah', [MataKuliahController::class, 'index']);
+            Route::post('mata-kuliah', [MataKuliahController::class, 'store']);
 
             Route::get('ref-agama', [ReferensiController::class, 'agama']);
             Route::get('ref-alat-transportasi', [ReferensiController::class, 'alatTransportasi']);

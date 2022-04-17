@@ -13,6 +13,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ url('dashboard/mata-kuliah') }}">
+                <i class="fa-solid fa-shapes fa-fw mr-2"></i>
+                <span class="menu-title">Mata Kuliah</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#referensi" aria-expanded="false"
                 aria-controls="referensi">
                 <i class="fa-solid fa-file-lines fa-fw mr-2"></i>
