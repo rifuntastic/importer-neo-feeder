@@ -24,8 +24,7 @@ class MahasiswaController extends Controller
 
         return view('dashboard.mahasiswa.index', [
             'prodi' => $getProdi->getData(),
-            'semester' => $getSemester->getData(),
-            'order' => 'id_semester desc'
+            'semester' => $getSemester->getData()
         ]);
     }
 

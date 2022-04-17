@@ -20,7 +20,8 @@
                 <div class="card-description">
                     <p>Petunjuk :</p>
                     <ol class="list">
-                        <li>Download file template excel disini</li>
+                        <li>Download file template excel <a
+                                href="{{ url('files/import-mahasiswa-baru.xlsx') }}">disini</a></li>
                         <li>Isikan data mahasiswa baru pada file excel sesuai petunjuk</li>
                     </ol>
                 </div>
