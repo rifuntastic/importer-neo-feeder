@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SandboxController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\InformasiController;
+use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\LogImportController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ReferensiController;
@@ -35,6 +37,9 @@ Route::middleware('authneofeeder')->group(function() {
             Route::get('mata-kuliah', [MataKuliahController::class, 'index']);
             Route::post('mata-kuliah', [MataKuliahController::class, 'store']);
 
+            Route::get('kurikulum', [KurikulumController::class, 'index']);
+            Route::post('kurikulum', [KurikulumController::class, 'store']);
+
             Route::get('ref-agama', [ReferensiController::class, 'agama']);
             Route::get('ref-alat-transportasi', [ReferensiController::class, 'alatTransportasi']);
             Route::get('ref-jalur-daftar', [ReferensiController::class, 'jalurDaftar']);
@@ -46,11 +51,14 @@ Route::middleware('authneofeeder')->group(function() {
             Route::get('ref-pembiayaan', [ReferensiController::class, 'pembiayaan']);
             Route::get('ref-penghasilan', [ReferensiController::class, 'penghasilan']);
             Route::get('ref-wilayah', [ReferensiController::class, 'wilayah']);
+            Route::get('ref-prodi', [ReferensiController::class, 'prodi']);
             Route::get('ref-wilayah-provinsi', [ReferensiController::class, 'wilayahProvinsi']);
             Route::get('ref-wilayah-kota', [ReferensiController::class, 'wilayahKota']);
             Route::get('ref-wilayah-kecamatan', [ReferensiController::class, 'wilayahKecamatan']);
 
             Route::get('log-import', [LogImportController::class, 'index']);
+
+            Route::get('informasi', [InformasiController::class, 'index']);
         });
 
         Route::get('error', function () {

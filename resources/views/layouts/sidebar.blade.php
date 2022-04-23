@@ -19,6 +19,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ url('dashboard/kurikulum') }}">
+                <i class="fa-solid fa-book fa-fw mr-2"></i>
+                <span class="menu-title">Kurikulum</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#referensi" aria-expanded="false"
                 aria-controls="referensi">
                 <i class="fa-solid fa-file-lines fa-fw mr-2"></i>
@@ -45,6 +51,8 @@
                     </li>
                     <li class="nav-item"><a class="nav-link"
                             href="{{ url('dashboard/ref-penghasilan') }}">Penghasilan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('dashboard/ref-prodi') }}">Program Studi</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('dashboard/ref-wilayah') }}">Wilayah</a></li>
                 </ul>
             </div>
@@ -66,6 +74,12 @@
             <a class="nav-link" href="{{ url('dashboard/log-import') }}">
                 <i class="fa-solid fa-clock-rotate-left fa-fw mr-2"></i>
                 <span class="menu-title">Log Import</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('dashboard/informasi') }}">
+                <i class="fa-solid fa-circle-info fa-fw mr-2"></i>
+                <span class="menu-title">Informasi</span>
             </a>
         </li>
     </ul>

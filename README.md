@@ -2,13 +2,14 @@
 <br/><br/>
 Importer aplikasi PDDIKTI Neo Feeder menggunakan file excel. Aplikasi ini dikembangkan menggunakan PHP versi 8.1.4 dengan framework Laravel versi 9.5.1
 
-<br/>
+<br/><br/>
 
 ## Fitur
 
 -   Insert Biodata Mahasiswa :white_check_mark:
 -   Insert Riwayat Pendidikan Mahasiswa :white_check_mark:
 -   Insert Mata Kuliah :white_check_mark:
+-   Insert Kurikulum :white_check_mark:
 -   Insert Mata Kuliah ke Kurikulum :hourglass_flowing_sand:
 
 <br/>

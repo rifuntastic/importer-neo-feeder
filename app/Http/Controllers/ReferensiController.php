@@ -138,6 +138,20 @@ class ReferensiController extends Controller
         return view('dashboard.referensi.penghasilan');
     }
 
+    public function prodi(Request $request)
+    {
+        if($request->ajax()) {
+            $getProdi = new NeoFeeder([
+                'act' => 'GetProdi',
+                'order' => 'nama_jenjang_pendidikan, nama_program_studi'
+            ]);
+
+            return $getProdi->getData();
+        }
+
+        return view('dashboard.referensi.prodi');
+    }
+
     public function wilayah()
     {
         $getWilayahNegara = new NeoFeeder([

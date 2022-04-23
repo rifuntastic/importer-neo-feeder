@@ -25,7 +25,7 @@
     <div class="col-xl-4 grid-margin stretch-card d-none d-xl-block">
         <div class="card tale-bg">
             <div class="card-people mt-auto">
-                <img src="{{ url('images/student.svg') }}" alt=" people">
+                <img src="{{ url('images/student.svg') }}" alt="people">
             </div>
         </div>
     </div>
@@ -63,7 +63,8 @@
                         <p class="fs-30 counter">{{ $count_prodi }}</p>
                     </div>
                     <div class="card-footer border-top-0">
-                        <button type="button" class="btn btn-light bg-white btn-xs float-right">Selengkapnya</button>
+                        <a href="{{ url('dashboard/ref-prodi') }}"
+                            class="btn btn-light bg-white btn-xs float-right">Selengkapnya</a>
                     </div>
                 </div>
             </div>
