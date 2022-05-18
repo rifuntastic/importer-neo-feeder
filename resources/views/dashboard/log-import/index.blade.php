@@ -50,11 +50,20 @@
             columns: [
                 { data: null, orderable: false, searchable: false },
                 { data: 'act' },
-                { data: 'status' },
+                {
+                    data: 'status',
+                    render: function (data, type, row, meta) {
+                        if(data == 'Sukses') {
+                            return `<label class="badge badge-outline-success">`+data+`</label>`
+                        } else {
+                            return `<label class="badge badge-outline-danger">`+data+`</label>`
+                        }
+                    },
+                    className: 'text-center'
+                },
                 { data: 'description' },
                 { data: 'created_at' }
-            ],
-            order: [[4, 'desc']]
+            ]
         });
         table.on('order.dt search.dt', function () {
             table.column(0, {search:'applied', order:'applied'}).nodes().each(function (cell, i) {

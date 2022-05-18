@@ -10,7 +10,7 @@ class LogImportController extends Controller
     public function index(Request $request)
     {
         if($request->ajax()) {
-            $getLogImport = ImportLog::all();
+            $getLogImport = ImportLog::orderBy('created_at', 'desc')->get();
 
             return $getLogImport;
         }
