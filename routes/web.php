@@ -39,6 +39,8 @@ Route::middleware('authneofeeder')->group(function() {
 
             Route::get('kurikulum', [KurikulumController::class, 'index']);
             Route::post('kurikulum', [KurikulumController::class, 'store']);
+            Route::get('kurikulum/{id}', [KurikulumController::class, 'show']);
+            Route::post('kurikulum-matkul/{id}', [KurikulumController::class, 'storeMatkul']);
 
             Route::get('ref-agama', [ReferensiController::class, 'agama']);
             Route::get('ref-alat-transportasi', [ReferensiController::class, 'alatTransportasi']);

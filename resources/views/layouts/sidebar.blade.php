@@ -18,7 +18,7 @@
                 <span class="menu-title">Mata Kuliah</span>
             </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item {{ Request::is('dashboard/kurikulum*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('dashboard/kurikulum') }}">
                 <i class="fa-solid fa-book fa-fw mr-2"></i>
                 <span class="menu-title">Kurikulum</span>

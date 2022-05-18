@@ -22,7 +22,7 @@
                     <ol class="list">
                         <li>Download file template excel <a href="{{ url('files/import-mata-kuliah.xlsx') }}">disini</a>
                         </li>
-                        <li>Isikan data mata kuliah pada file excel sesuai petunjuk</li>
+                        <li>Isikan data mata kuliah menggunakan file excel sesuai petunjuk</li>
                     </ol>
                 </div>
                 <form action="{{ url('dashboard/mata-kuliah') }}" method="post" enctype="multipart/form-data"
@@ -88,6 +88,29 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-5">Data Mata Kuliah</h4>
+                <div class="table-responsive">
+                    <table id="refMataKuliah" class="display expandable-table table-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>ID Matkul</th>
+                                <th>Kode Mata Kuliah</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>SKS</th>
+                                <th>Program Studi</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @push('page-stylesheet')
@@ -107,6 +130,28 @@
         $('#formImport').submit(function (e) {
             $('#btnImport').attr('disabled', true);
             $('#btnImport').html('<i class="fa-solid fa-spinner fa-spin fa-fw mr-2"></i>Proses Import');
+        });
+
+        let table = $('#refMataKuliah').DataTable({
+            ajax: {
+                url: ''
+            },
+            columns: [
+                { data: null, orderable: false, searchable: false },
+                { data: 'id_matkul' },
+                { data: 'kode_mata_kuliah' },
+                { data: 'nama_mata_kuliah' },
+                {
+                    data: 'sks_mata_kuliah',
+                    render: DataTable.render.number('.'),
+                },
+                { data: 'nama_program_studi' },
+            ]
+        });
+        table.on('order.dt search.dt', function () {
+            table.column(0, {search:'applied', order:'applied'}).nodes().each(function (cell, i) {
+                cell.innerHTML = i+1;
+            });
         });
     });
 </script>

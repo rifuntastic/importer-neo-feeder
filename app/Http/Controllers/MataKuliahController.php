@@ -9,8 +9,17 @@ use App\Imports\MataKuliahImport;
 
 class MataKuliahController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        if($request->ajax()) {
+            $getMataKuliah = new NeoFeeder([
+                'act' => 'GetMataKuliah',
+                'order' => 'nama_program_studi, kode_mata_kuliah'
+            ]);
+
+            return $getMataKuliah->getData();
+        }
+
         $getProdi = new NeoFeeder([
             'act' => 'GetProdi',
             'order' => "id_jenjang_pendidikan, nama_program_studi"

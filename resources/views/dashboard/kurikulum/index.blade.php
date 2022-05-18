@@ -22,7 +22,7 @@
                     <ol class="list">
                         <li>Download file template excel <a href="{{ url('files/import-kurikulum.xlsx') }}">disini</a>
                         </li>
-                        <li>Isikan data kurikulum pada file excel sesuai petunjuk</li>
+                        <li>Isikan data kurikulum menggunakan file excel sesuai petunjuk</li>
                     </ol>
                 </div>
                 <form action="{{ url('dashboard/kurikulum') }}" method="post" enctype="multipart/form-data"
@@ -128,7 +128,7 @@
                 {
                     data: 'id_kurikulum', searchable: false,
                     render: function (data, type, row, meta) {
-                        return `<a class="btn btn-primary" href="kurikulum/${row['id_kurikulum']}">Insert Matkul</a>`;
+                        return `<a class="btn btn-outline-primary" href="kurikulum/${row['id_kurikulum']}">Daftar Matkul</a>`;
                     },
                     className: 'text-center'
                 },
