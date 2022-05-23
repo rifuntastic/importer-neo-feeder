@@ -98,3 +98,9 @@ Email : rivan.hadinata@gmail.com
 ## Credits
 
 -   Dashboard Template : <a href="https://github.com/BootstrapDash/skydash-free-bootstrap-admin-template" target="_blank">Skydash from BootstrapDash</a>
+
+<br/>
+
+## Support
+
+<p align="center"><img src="https://raw.githubusercontent.com/rifuntastic/importer-neo-feeder/master/public/images/qris.jpeg" width="200"></p>
