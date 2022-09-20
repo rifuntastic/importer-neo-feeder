@@ -11,6 +11,7 @@ Importer aplikasi PDDIKTI Neo Feeder menggunakan file excel. Aplikasi ini dikemb
 -   Insert Mata Kuliah :white_check_mark:
 -   Insert Kurikulum :white_check_mark:
 -   Insert Mata Kuliah ke Kurikulum :white_check_mark:
+-   Insert Aktivitas Mahasiswa :white_check_mark:
 -   Lainnya :hourglass_flowing_sand:
 
 <br/>

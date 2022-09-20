@@ -25,15 +25,8 @@ class MataKuliahController extends Controller
             'order' => "id_jenjang_pendidikan, nama_program_studi"
         ]);
 
-        $getSemester = new NeoFeeder([
-            'act' => 'GetSemester',
-            'filter' => "a_periode_aktif = '1'",
-            'order' => "id_semester desc"
-        ]);
-
         return view('dashboard.mata-kuliah.index', [
-            'prodi' => $getProdi->getData(),
-            'semester' => $getSemester->getData()
+            'prodi' => $getProdi->getData()
         ]);
     }
 

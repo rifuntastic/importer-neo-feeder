@@ -47,6 +47,19 @@ class ReferensiController extends Controller
         return view('dashboard.referensi.jalur-daftar');
     }
 
+    public function jenisAktivitas(Request $request)
+    {
+        if($request->ajax()) {
+            $getJenisAktivitas = new NeoFeeder([
+                'act' => 'GetJenisAktivitasMahasiswa'
+            ]);
+
+            return $getJenisAktivitas->getData();
+        }
+
+        return view('dashboard.referensi.jenis-aktivitas');
+    }
+
     public function jenisTinggal(Request $request)
     {
         if($request->ajax()) {

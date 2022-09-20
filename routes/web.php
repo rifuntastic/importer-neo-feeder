@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AktivitasMahasiswaController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SandboxController;
 use App\Http\Controllers\SettingController;
@@ -42,9 +44,15 @@ Route::middleware('authneofeeder')->group(function() {
             Route::get('kurikulum/{id}', [KurikulumController::class, 'show']);
             Route::post('kurikulum-matkul/{id}', [KurikulumController::class, 'storeMatkul']);
 
+            // Route::get('kelas', [KelasController::class, 'index']);
+
+            Route::get('aktivitas-mahasiswa', [AktivitasMahasiswaController::class, 'index']);
+            Route::post('aktivitas-mahasiswa', [AktivitasMahasiswaController::class, 'store']);
+
             Route::get('ref-agama', [ReferensiController::class, 'agama']);
             Route::get('ref-alat-transportasi', [ReferensiController::class, 'alatTransportasi']);
             Route::get('ref-jalur-daftar', [ReferensiController::class, 'jalurDaftar']);
+            Route::get('ref-jenis-aktivitas', [ReferensiController::class, 'jenisAktivitas']);
             Route::get('ref-jenis-tinggal', [ReferensiController::class, 'jenisTinggal']);
             Route::get('ref-jenjang-pendidikan', [ReferensiController::class, 'jenjangPendidikan']);
             Route::get('ref-kebutuhan-khusus', [ReferensiController::class, 'kebutuhanKhusus']);
